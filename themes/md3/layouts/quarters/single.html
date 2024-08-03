@@ -1,0 +1,285 @@
+{{ define "main" }}
+
+{{ $path := "data/classes.csv" }}
+{{ $classes := slice }}
+{{ with resources.Get "data/classes.csv" }}
+  {{ $csv := . | transform.Unmarshal }}
+  {{ $header := index $csv 0 }}
+	{{ range (after 1 $csv) }}
+		{{ $tempdict := dict }}
+		{{ $count := 0 }}
+		{{ range . }}
+			{{ $heading := index $header $count }}
+			{{ $value := . }}
+			{{ if or (eq $heading "startTime") (eq $heading "endTime") }}
+				{{ $hms := split $value " " }}
+				{{ $hm := split (index $hms 0) ":" }}
+				{{ $hour := int (index $hm 0) }}
+				{{ $minute := index $hm 1 }}
+				{{ if and (lt $hour 12) (eq (lower (index $hms 1)) "pm") }}
+					{{ $hour = $hour | add 12 }}
+				{{ end }}
+				{{ $hour = string $hour }}
+				{{ if eq (len $hour) 1 }}
+					{{ $hour = add "0" $hour }}
+				{{ end }}
+				{{ $value = time.AsTime (add "1899-12-30T" $hour ":" $minute ":00") }}
+			{{ end }}
+			{{ $tempdict = $tempdict | merge (dict $heading $value) }}
+			{{ $count = $count | add 1 }}
+		{{ end }}
+		{{ $classes = $classes | append $tempdict }}
+	{{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+{{ $quarterClasses := where $classes "quarter" .Params.data }}
+{{ $earliestTime := time.AsTime "1899-12-30T23:00:00" }}
+{{ $latestTime := time.AsTime "1899-12-30T01:00:00" }}
+{{ $daysRoomsTimes := dict }}
+{{ $timeInterval := 60 }}
+
+{{ range $quarterClasses }}
+
+	{{ $weekday := index . "weekday" }}
+	{{ $room := index . "room" }}
+	{{ $name := index . "name" }}
+	{{ $startTime := index . "startTime" }}
+	{{ $endTime := index . "endTime" }}
+
+	{{ with $startTime }}
+		{{ if lt . $earliestTime }}
+			{{ $earliestTime = . }}
+		{{ end }}
+		{{ if (and (or (eq .Minute 15) (eq .Minute 45)) (lt 15 $timeInterval)) }}
+			{{ $timeInterval = 15 }}
+		{{ else if (and (eq .Minute 30) (lt 30 $timeInterval)) }}
+			{{ $timeInterval = 30 }}
+		{{ end }}
+	{{ end }}
+
+	{{ with $endTime }}
+		{{ if gt . $latestTime }}
+			{{ $latestTime = . }}
+		{{ end }}
+		{{ if (and (or (eq .Minute 15) (eq .Minute 45)) (lt 15 $timeInterval)) }}
+			{{ $timeInterval = 15 }}
+		{{ else if (and (eq .Minute 30) (lt 30 $timeInterval)) }}
+			{{ $timeInterval = 30 }}
+		{{ end }}
+	{{ end }}
+
+	{{ if isset $daysRoomsTimes $weekday }}
+		{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
+		{{ if isset $tempRoomsTimes $room }}
+			{{ $tempTimes := index $tempRoomsTimes $room }}
+			{{ if isset $tempTimes (string $startTime) }}
+				{{ $tempClasses := index $tempTimes (string $startTime) }}
+				{{ $tempClasses = $tempClasses | merge (dict $name .) }}
+				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) $tempClasses) }}
+				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+			{{ else }}
+				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) (dict $name . )) }}
+				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+			{{ end }}
+		{{ else }}
+			{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room (dict (string $startTime) (dict $name . ))) }}
+			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+		{{ end }}
+	{{ else }}
+		{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name . )))) }}
+	{{ end }}
+{{ end }}
+
+<div>
+	{{ with .Params.dates }}<div class="dates title-medium surface-dim">{{ . }}</div>{{ end }}
+	{{ with .Params.register }}<div class="registration body-large">Registration opens <span class="title-medium">{{ . }}</span> at noon.</div>{{ end }}
+</div>
+
+<p class="class-page-addendum">
+The LHH Committee sends reminders through our Facebook Group and Google Group to spread the word about registering. Classes can fill quickly, so it is best to register early. In cases of low enrollment, classes may be canceled up to two weeks before the session begins. For the sake of the teachers and other students, please try to register early!
+</p>
+
+<p class="class-page-addendum">
+For more information on registering, see our <a class="text state label-large" href="/faq#classes-and-registration">FAQ</a>
+</p>
+
+<div id="schedule">
+	{{ $numberOfDays := 1 }}
+
+	{{ range slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" }}
+		{{ if (index $daysRoomsTimes .) }}
+			<input class="tab" type="radio" name="tabs" id="{{ . }}"{{ if eq . "Wednesday" }} checked{{ end }}>
+			<label class="label-large tertiary-container state outline" for="{{ . }}">
+				{{ substr . 0 3 }}
+				<span class="weekday-suffix">{{ substr . 3 }}</span>
+			</label>
+			{{ $numberOfDays = $numberOfDays | add 1}}
+		{{ end }}
+	{{ end }}
+
+	{{ range slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" }}
+		{{ $roomsTimes := index $daysRoomsTimes . }}
+		{{ if $roomsTimes }}
+
+			<div id="{{ . }}Schedule" class="schedule" style="grid-column-end: {{ $numberOfDays }};">
+				{{ $roomCount := 2 }}
+				{{ $roomColumnStart := dict }}
+				{{ $roomColumnEnd := dict }}
+				{{ range slice "Room 1" "Room 2" "Room 3" "Room 4" "Gym" "Kitchen" "Outdoors" "Offsite" }}
+					{{ if index $roomsTimes . }}
+						{{ $classesAtTimeInRoom := 0 }}
+						{{ range $k, $v := (index $roomsTimes .) }}
+							{{ if gt (len $v) $classesAtTimeInRoom }}
+								{{ $classesAtTimeInRoom = len $v }}
+							{{ end }}
+						{{ end }}
+
+						<div class="row1 surface-dim" style="grid-column-start: {{ $roomCount }}; grid-column-end: {{ add $roomCount $classesAtTimeInRoom }}">{{ . }}</div>
+						
+						{{ $roomColumnStart = $roomColumnStart | merge (dict . $roomCount) }}
+						{{ $roomColumnEnd = $roomColumnEnd | merge (dict . (add $roomCount $classesAtTimeInRoom )) }}
+						{{ $roomCount = $roomCount | add $classesAtTimeInRoom }}
+					{{ end }}
+				{{ end }}
+
+				{{ $duration := time.Duration "minute" $timeInterval }}
+				{{ $time := $earliestTime }}
+				{{ $timeCount := 2 }}
+				{{ $timeRow := dict }}
+
+				{{ range seq 1000 }}
+				  
+					<div class="col1 surface-dim" style="grid-row: {{ $timeCount }};">{{ time.Format "3:04" $time }}</div>
+
+					{{ if eq ( mod $timeCount 2 ) 0 }}
+					<div class="horizontal-bar surface-container" style="grid-column-start: 1; grid-column-end: {{ $roomCount }}; grid-row: {{ $timeCount }};"></div>
+					{{ end }}
+
+					{{ $timeRow = $timeRow | merge (dict (string $time) $timeCount) }}
+					{{ $time = $time.Add $duration }}
+					{{ $timeCount = $timeCount | add 1 }}
+
+					{{ if ge $time $latestTime }}
+						{{ $timeRow = $timeRow | merge (dict (string $time) $timeCount) }}
+						{{ $time = $time.Add $duration }}
+						{{ $timeCount = $timeCount | add 1 }}
+				    {{ break }}
+				  {{ end }}
+				{{ end }}
+
+				<div class="shim surface" style="grid-row-start: 1; grid-row-end: {{ $timeCount }};"></div>
+
+				{{ range $room, $times := $roomsTimes }}
+					{{ range $time, $classes := $times }}
+
+						{{ $classCount := len $classes }}
+						{{ $count := 0 }}
+
+						{{ range $name, $value := $classes }}
+
+							{{ if (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play")) }}
+								<div style="{{ if eq $name "Break" }}
+															grid-column-start: 2;
+															grid-column-end: {{ $roomCount }};
+															z-index: -1;
+														{{ else }}
+															{{ if eq $classCount 1 }}
+																grid-column-start: {{ index $roomColumnStart $room }};
+																grid-column-end: {{ index $roomColumnEnd $room }};
+															{{ else }}
+																grid-column-start: {{ add $count (index $roomColumnStart $room) }};
+																grid-column-end: {{ add 1 $count (index $roomColumnStart $room) }};
+															{{ end }}
+														{{ end }}
+														grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
+														grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};"
+											class="non-class secondary-container outline title-small">{{ $name }}</div>
+							{{ else }}
+								<a class="class secondary-container state outline" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
+													grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};
+													{{ if eq $classCount 1 }}
+														grid-column-start: {{ index $roomColumnStart $room }};
+														grid-column-end: {{ index $roomColumnEnd $room }};
+													{{ else }}
+														grid-column-start: {{ add $count (index $roomColumnStart $room) }};
+														grid-column-end: {{ add 1 $count (index $roomColumnStart $room) }};
+													{{ end }}
+													"
+										href="#{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}">
+									<div class="title-small">{{ $name }}{{ with (index $value "status") }} <mark class="error-container">{{ . }}</mark>{{ end }}</div>
+									{{ with (index $value "teacher") }}<div class="teacher">{{ . }}</div>{{ end }}
+									{{ with (index $value "startAge") }}
+										<div class="ages">Ages: {{ . }}
+											{{ if (index $value "endAge") }}
+												 - {{ index $value "endAge" }}
+											{{ else }}
+												+
+											{{ end }}
+										</div>
+									{{ end }}
+									{{ with (index $value "price") }}<div class="price">${{ . }}</div>{{ end }}
+									{{ with (index $value "exceptions") }}<div class="exceptions">{{ . }}</div>{{ end }}
+									{{ with (index $value "location") }}<div class="location">Location: {{ . }}</div>{{ end }}
+								</a>
+							{{ end }}
+							{{ $count = $count | add 1 }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</div>
+		{{ end }}
+	{{ end }}
+</div>
+
+{{ if or .Params.schedule .Params.descriptions }}
+	<div class="download-links">
+		{{ if .Params.schedule }}
+			<a class="secondary-container state button label-large" rel="noreferrer noopener" target="_blank" href="{{ .Params.schedule }}">Download Class Schedule</a>
+		{{ end }}
+		{{ if .Params.descriptions }}
+			<a class="secondary-container state button label-large" rel="noreferrer noopener" target="_blank" href="{{ .Params.descriptions }}">Download Class Descriptions</a>
+		{{ end }}
+	</div>
+{{ end }}
+
+<div class="class-description-container">
+	{{ range $quarterClasses }}
+		{{ $name := index . "name" }}
+		{{ if not (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play")) }}
+			<div id="{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}" class="surface-container-highest state outline class-description">
+				<h6 class="title-large">{{ $name }}{{ with (index . "status") }} - <mark class="error-container">{{ . }}</mark>{{ end }}</h6>
+				{{ if or (index . "teacher") (index . "ages") (index . "maxStudents") (index . "price") (index . "condition") (index . "exceptions") (index . "location") }}
+					<div class="info">
+						{{ with (index . "teacher")}}Instructor: {{ . }}{{ end }}
+						{{ if (index . "startAge") }}
+							<br>Ages: {{ index . "startAge" }}
+							{{ if (index . "endAge") }}
+								 - {{ index . "endAge" }}
+							{{ else }}
+								+
+							{{ end }}
+						{{ end }}
+						{{ with (index . "maxStudents")}}<br>Maximum class size: {{ . }}{{ end }}
+						{{ with (index . "price")}}<br>${{ . }}{{ end }}
+						{{ with (index . "condition")}}<br>{{ . }}{{ end }}
+						{{ with (index . "exceptions")}}<br>{{ . }}{{ end }}
+						{{ with (index . "location")}}<br>Location: {{ . }}{{ end }}
+					</div>
+				{{ end }}
+				<div class="description">{{ index . "description" }}</div>
+				{{ with (index . "link") }}
+					<hr class="divider">
+					<a class="enroll primary state button label-large" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
+				{{ end }}
+			</div>
+		{{ end }}
+	{{ end }}
+</div>
+
+<a class="primary-container state fab label-large" href="#schedule">&#8593;</a>
+
+{{ end }}

@@ -1,0 +1,76 @@
+about.question01.question = "Who are we?"
+about.question01.answer = "Loyal Heights Homeschool Program (LHH) is a quasi-cooperative community of homeschooling families who gather each week in the Loyal Heights neighborhood of Seattle for classes, play, and community. LHH is led by a committee of parent volunteers who develop the class schedule and help organize events for the families of the LHH community. We partner with the Seattle Parks and Recreation Department who helps administer our program by hosting the registration system and providing the location for most of our classes. Classes run on a quarterly schedule in the fall, winter, and spring."
+
+about.question02.question = "Is LHH right for me?"
+about.question02.answer = "If you are a homeschooling family in Seattle looking for in-person community and/or classes, you are welcome to join. We are a non-denominational, non-sectarian, non-discriminating group of homeschooling families interested in providing our families the opportunity to develop friendships and learn together in a supportive, multi-age environment. While we are not technically a co-op, we expect families to contribute in some way as they are able. There are opportunities for both long term and short term volunteer jobs, from developing the program of classes to moving tables and chairs, from managing our website to tidying up the lobby at the end of the day."
+
+about.question03.question = "How do I join the LHH community?"
+about.question03.answer = """If you are a newcomer interested in joining our community, please send us message through the <a class="text state label-large" href="/#contact-form">contact form</a> on our home page or email loyalheightshomeschool@gmail.com to learn more. We aim to respond within 3-5 days.
+
+Joining will involve meeting or talking to someone first, in order to maintain the safety and privacy of our families. Once we’ve verified that you are a real human, interested in or currently homeschooling in the Seattle area, you are eligible to join the LHH Google Group, LHH Facebook Group, and Seattle Homeschool Group (SHG) network. If you don’t hear back from us within 5 days, be sure to check your spam/junk folder in case our response email landed there."""
+
+about.question04.question = "What ages does this program serve?"
+about.question04.answer = "Our community is open to homeschooling families of all ages who are interested in in-person community and classes centered around the Loyal Heights neighborhood. Classes that are part of our program serve students from ages 3-18."
+
+about.question05.question = "What is SHG? Are you the same as SHG?"
+about.question05.answer = """The <a class="text state label-large" href="https://www.seattlehomeschoolgroup.org/" target="_blank" rel="noreferrer noopener">Seattle Homeschool Group</a> is an informal network of Seattle-area homeschool families. LHH families are a subset of SHG. When you join LHH, you will also be added to the SHG network. SHG families are welcome to participate in LHH, but SHG is not an in-person community in and of itself. It is primarily an online network of Seattle homeschooling families."""
+
+about.question06.question = "What is the LHH Committee?"
+about.question06.answer = """The LHH Committee is a group of parent volunteers who plan and run the LHH Program. In addition to putting together the schedule of classes for each quarter, the committee manages all our communications and plans community events throughout the year. You can reach us by email at loyalheightshomeschool@gmail.com."""
+
+registration.question07.question = "How do I register for classes?"
+registration.question07.answer = """Registration typically starts 4 to 6 weeks before the start of the upcoming quarter. The LHH Committee will send reminders through our Facebook Group, and Google Group to spread the word about registering. Classes can fill quickly, so it is best to register early. In cases of low enrollment, classes may be canceled up to two weeks before the session begins. For the sake of the teachers and other students, please try to register early!
+
+There are three ways to register for classes:
+
+1. **Online:** Visit the <a class="text state label-large" href="https://anc.apm.activecommunities.com/seattle/activity/search?activity_select_param=2&amp;activity_keyword=homeschool&amp;viewMode=list" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a>
+2. **By phone:** Call the Loyal Heights Community Center at (206) 684-4052.
+3. **In person:** Go to any Seattle Community Center and register in person at the front desk.
+
+**Sibling Discounts:** There is a $5 discount per additional sibling signed up for the same class."""
+
+registration.question08.question = "Are there scholarships?"
+registration.question08.answer = """Seattle Parks and Recreation offers scholarships for qualifying families. Applications are available starting in the June of the following school year. You can apply at any time and your scholarship will apply to all classes for the rest of the school year.
+
+The primary income-earner in your household is the person who should fill out the application. Although their website states that you can apply at any community center or pool, past experience by LHH families has shown that the fastest way to get approved is in person at the Loyal Heights Community Center. Make sure you have all the necessary documents with you. The primary applicant should bring their completed application, photo ID and all required income and dependency documentation. It is beneficial to list all dependents, including babies, even if you are not planning on enrolling them in classes.
+
+If you wish to use funds to register for classes, you must be approved PRIOR to registering. Approval can take up to several weeks. Applying early helps ensure you will get the funds, if you are eligible. Sometimes, they do not have enough funds to meet the demand and in those instances, scholarships are granted on a first come, first served basis.
+
+Visit the <a class="text state label-large" href="https://www.seattle.gov/parks/scholarships-and-financial-aid" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a> for eligibility guidelines, application form, and other information."""
+
+registration.question09.question = "Can my child register for classes if they are outside the stated age range?"
+registration.question09.answer = """**Community Center classes:** Students outside the age range need teacher approval. Teachers make the age variance policy for their classes. If approved, the teacher lets the community center staff know the full name of the student and the parent will need to register the student in person or by calling the Loyal Heights Community Center at (206) 684-4052. Online registration will not allow age variances.
+
+**Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
+
+registration.question10.question = "Are there waitlists for classes that are full?"
+registration.question10.answer = "If a class is full, a waitlist will be started. If space becomes available, you will be notified and can register at that time by phone or in person. In some cases, class limits may be expanded, and withdrawals do occasionally occur."
+
+registration.question11.question = "I changed my mind and want to withdraw from a class I’ve signed up for. Can I get a refund?"
+registration.question11.answer = """**Community Center classes:** A refund is available if a student drops the class before the second class. You will receive a prorated refund, minus service charge. See the <a class="text state label-large" href="https://www.seattle.gov/parks/reserve/refunds-reductions-and-waivers" rel="noreferrer noopener" target="_blank">Seattle Parks and Recreation Refund Policy</a> for more details.
+
+**Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
+
+registration.question12.question = "What is your Health and Safety Policy?"
+registration.question12.answer = """At LHH, we use a combination of approaches to help keep our program safe and accessible to all our families. 
+
+**Air flow and filtration:** The community center has HEPA filters in two classrooms, and we will leave the windows open in the 3rd classroom and lobby. Please plan to layer in case of cooler weather.  
+
+**Stay home when sick:** As much as we love to be together, we ask that people stay home when symptomatic with a viral infection. For guidance, see this <a class="text state label-large" rel="noreferrer noopener" target="_blank" href="https://doh.wa.gov/sites/default/files/2023-02/420456-COVID19DecisionTrees.pdf">Symptom and Exposure Flowchart</a>
+
+**Masks are optional:** While masks are not required at the community center, please respect those who choose to wear one. If you see someone wearing a mask, consider they may: have unvaccinated family members, feel ill and not want to get you sick, be immuno-compromised, have high-risk loved ones, or prefer to wear a mask. Please be kind and respect everyone’s choice. The community center has a supply of adult size masks available for use.
+
+**Note:** We would like our program to be accessible to as much of the community as possible, but LHH families should know that the community center is a mask-optional facility that is open to the public daily. Other activities, such as preschools, weight room, and after school programs take place within the building at the same time as our program. Some members feel more comfortable hanging out outdoors at the playground, grass, or playfields. We hope you will feel welcome either indoors or out."""
+
+parents.question13.question = "Is this a drop off program? Or do I need to stay on site with my child/children?"
+parents.question13.answer = """**Community Center classes:** A designated adult must remain on site for children under 11, though it does not have to be the child’s parent. A child must be at least 11 years old to be dropped off without parental supervision, if there is a break between classes.
+
+**Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
+
+parents.question14.question = "Can I stay with my child in the classroom?"
+parents.question14.answer = """**Community Center classes:** This decision is up to each individual teacher. If you are unsure if your child is ready to be dropped off without you in the classroom, you can reach out to the teacher to ask if staying in the classroom is okay with them. Contact a LHH committee member if you need help connecting with a specific teacher.
+
+**Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
+
+parents.question15.question = "Can I come to hang out with LHH without signing up for classes?"
+parents.question15.answer = """Yes! Homeschooling families are welcome to spend time with us at the Loyal Heights Community Center and playground. Please check the current schedule. The community center is an inviting space with a play area for babies and toddlers, and a sitting area where parents like to sit and hang out. Outside, there is a large grassy area, playground, a small basketball court, and a large turf field. If you plan to come for the first time, please let us know ahead of time, so that we can greet you and show you around. <a class="text state label-large" href="/#contact-form">Contact us</a> through the form on our homepage or email us at loyalheightshomeschool@gmail.com."""

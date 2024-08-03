@@ -1,0 +1,278 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--error: #BA1A1A;
+		--error-container: #FFDAD6;
+		--inverse-on-surface: #EDF1F5;
+		--inverse-primary: #90CEF4;
+		--inverse-surface: #2C3134;
+		--on-error: #FFFFFF;
+		--on-error-container: #410002;
+		--on-primary: #FFFFFF;
+		--on-primary-container: #001E2D;
+		--on-secondary: #FFFFFF;
+		--on-secondary-container: #0A1E28;
+		--on-surface: #181C1F;
+		--on-surface-variant: #41484D;
+		--on-tertiary: #FFFFFF;
+		--on-tertiary-container: #1D1735;
+		--outline: #71787E;
+		--outline-variant: #C1C7CD;
+		--primary: #1E6586;
+		--primary-container: #C5E7FF;
+		--scrim: #000000;
+		--secondary: #4E616D;
+		--secondary-container: #D1E5F4;
+		--shadow: #000000;
+		--surface: #F6FAFE;
+		--surface-bright: #F6FAFE;
+		--surface-container: #EBEEF3;
+		--surface-container-high: #E5E8ED;
+		--surface-container-highest: #DFE3E7;
+		--surface-container-low: #F0F4F8;
+		--surface-container-lowest: #FFFFFF;
+		--surface-dim: #D7DADF;
+		--surface-variant: #DDE3EA;
+		--tertiary: #615A7C;
+		--tertiary-container: #E7DEFF;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--error-container: #93000A;
+		--error: #FFB4AB;
+		--inverse-on-surface: #2C3134;
+		--inverse-primary: #1E6586;
+		--inverse-surface: #DFE3E7;
+		--on-error-container: #FFDAD6;
+		--on-error: #690005;
+		--on-primary-container: #C5E7FF;
+		--on-primary: #00344A;
+		--on-secondary-container: #D1E5F4;
+		--on-secondary: #20333E;
+		--on-surface-variant: #C1C7CD;
+		--on-surface: #DFE3E7;
+		--on-tertiary-container: #E7DEFF;
+		--on-tertiary: #322C4C;
+		--outline-variant: #41484D;
+		--outline: #8B9297;
+		--primary-container: #004C6A;
+		--primary: #90CEF4;
+		--scrim: #000000;
+		--secondary-container: #374955;
+		--secondary: #B6C9D8;
+		--shadow: #000000;
+		--surface-bright: #353A3D;
+		--surface-container-high: #262B2E;
+		--surface-container-highest: #313539;
+		--surface-container-low: #181C1F;
+		--surface-container-lowest: #0A0F12;
+		--surface-container: #1C2023;
+		--surface-dim: #0F1417;
+		--surface-variant: #41484D;
+		--surface: #0F1417;
+		--tertiary-container: #494263;
+		--tertiary: #CBC1E9;
+	}
+}
+
+* {
+	color: inherit;
+	fill: inherit;
+}
+
+.primary {
+	background-color: var(--primary);
+	color: var(--on-primary);
+	fill: var(--on-primary);
+}
+.secondary {
+	background-color: var(--secondary);
+	color: var(--on-secondary);
+	fill: var(--on-secondary);
+}
+.tertiary {
+	background-color: var(--tertiary);
+	color: var(--on-tertiary);
+	fill: var(--on-tertiary);
+}
+.error {
+	background-color: var(--error);
+	color: var(--on-error);
+	fill: var(--on-error);
+}
+.primary-container {
+	background-color: var(--primary-container);
+	color: var(--on-primary-container);
+	fill: var(--on-primary-container);
+}
+.secondary-container {
+	background-color: var(--secondary-container);
+	color: var(--on-secondary-container);
+	fill: var(--on-secondary-container);
+}
+.tertiary-container {
+	background-color: var(--tertiary-container);
+	color: var(--on-tertiary-container);
+	fill: var(--on-tertiary-container);
+}
+.error-container {
+	background-color: var(--error-container);
+	color: var(--on-error-container);
+	fill: var(--on-error-container);
+}
+.surface {
+	background-color: var(--surface);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-bright {
+	background-color: var(--surface-bright);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-dim {
+	background-color: var(--surface-dim);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-container {
+	background-color: var(--surface-container);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-container-high {
+	background-color: var(--surface-container-high);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-container-highest {
+	background-color: var(--surface-container-highest);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-container-low {
+	background-color: var(--surface-container-low);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.surface-container-lowest {
+	background-color: var(--surface-container-lowest);
+	color: var(--on-surface);
+	fill: var(--on-surface);
+}
+.outline {
+	border: 1px solid var(--outline);
+}
+.outline-variant {
+	border: 1px solid var(--outline-variant);
+}
+
+.primary.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--primary) 92%, var(--on-primary) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--primary) 90%, var(--on-primary) 10%);
+	}
+}
+.secondary.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--secondary) 92%, var(--on-secondary) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--secondary) 90%, var(--on-secondary) 10%);
+	}
+}
+.tertiary.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--tertiary) 92%, var(--on-tertiary) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--tertiary) 90%, var(--on-tertiary) 10%);
+	}
+}
+.primary-container.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--primary-container) 92%, var(--on-primary-container) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--primary-container) 90%, var(--on-primary-container) 10%);
+	}
+}
+.secondary-container.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--secondary-container) 92%, var(--on-secondary-container) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--secondary-container) 90%, var(--on-secondary-container) 10%);
+	}
+}
+.tertiary-container.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--tertiary-container) 92%, var(--on-tertiary-container) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--tertiary-container) 90%, var(--on-tertiary-container) 10%);
+	}
+}
+.surface.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--surface) 92%, var(--on-surface) 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, var(--surface) 90%, var(--on-surface) 10%);
+	}
+}
+.surface-container-highest.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--surface-container-highest) 92%, var(--on-surface) 8%);
+	}
+	&:focus,
+	&:active,
+	&:target {
+		background-color: color-mix(in srgb, var(--surface-container-highest) 90%, var(--on-surface) 10%);
+	}
+}
+
+/* -----------*/
+
+.elevated.state {
+	background-color: var(--surface-container-low);
+	color: var(--primary);
+	fill: var(--primary);
+	&:hover {
+		background-color: color-mix(in srgb, var(--surface-container-low) 92%, var(--primary) 8%);
+	}
+	&:active,
+	&:focus {
+		background-color: color-mix(in srgb, var(--surface-container-low) 90%, var(--primary) 10%);
+	}
+}
+
+a[href^="mailto:"],
+.outlined,
+.text {
+	background-color: var(--surface-container-highest);
+	color: var(--primary);
+	fill: var(--primary);
+}
+
+a[href^="mailto:"],
+.outlined.state,
+.text.state {
+	&:hover {
+		background-color: color-mix(in srgb, var(--surface-container-highest) 92%, var(--primary) 8%);
+	}
+	&:active,
+	&:focus {
+		background-color: color-mix(in srgb, var(--surface-container-highest) 90%, var(--primary) 10%);
+	}
+}

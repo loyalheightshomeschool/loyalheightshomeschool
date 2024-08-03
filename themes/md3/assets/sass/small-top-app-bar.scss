@@ -1,0 +1,67 @@
+@use "elevation";
+
+.small-top-app-bar {
+	display: flex;
+	flex-flow: row nowrap;
+	place-content: center;
+	place-items: center;
+	gap: 8px;
+	width: 100%;
+	position: fixed;
+	height: 64px;
+	padding: 0 12px;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	@include elevation.level1;
+	& .headline {
+		flex-grow: 1;
+	}
+	& > a {
+		flex-grow: 1;
+	}
+}
+
+@media (800px <= width) {
+	.menu.button {
+		display: none;
+	}
+	.dropdown {
+		display: flex;
+		flex-flow: row nowrap;
+		place-content: center;
+		place-items: center;
+		gap: 8px;
+	}
+}
+
+@media (width <= 799px) {
+
+	.small-top-app-bar {
+		gap: 4px;
+		padding: 0 4px;
+		& > .button,
+		& nav > .button {
+			padding: 0 4px;
+			border-radius: 4px;
+			gap: 8px;
+		}
+	}
+	.dropdown {
+		position: absolute;
+		right: 0;
+		display: none;
+		top: 52px;
+		flex-direction: column;
+		padding: 8px;
+		gap: 8px;
+		@include elevation.level2;
+	}
+	nav {
+		&:hover .dropdown,
+		&:focus .dropdown,
+		&:focus-within .dropdown {
+			display: flex;
+		}
+	}
+}

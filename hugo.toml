@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Loyal Heights Homeschool'
+theme = 'md3'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+[params]
+	author = 'Ryan Kooger'
+	description = 'Website for Loyal Heights Homeschool - a Community of homeschoolers in Loyal Heights, Seattle'
