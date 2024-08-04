@@ -5,7 +5,7 @@ about.question02.question = "Is LHH right for me?"
 about.question02.answer = "If you are a homeschooling family in Seattle looking for in-person community and/or classes, you are welcome to join. We are a non-denominational, non-sectarian, non-discriminating group of homeschooling families interested in providing our families the opportunity to develop friendships and learn together in a supportive, multi-age environment. While we are not technically a co-op, we expect families to contribute in some way as they are able. There are opportunities for both long term and short term volunteer jobs, from developing the program of classes to moving tables and chairs, from managing our website to tidying up the lobby at the end of the day."
 
 about.question03.question = "How do I join the LHH community?"
-about.question03.answer = """If you are a newcomer interested in joining our community, please send us message through the <a class="text state label-large" href="/#contact-form">contact form</a> on our home page or email loyalheightshomeschool@gmail.com to learn more. We aim to respond within 3-5 days.
+about.question03.answer = """If you are a newcomer interested in joining our community, please email us at loyalheightshomeschool@gmail.com to learn more. We aim to respond within 3-5 days.
 
 Joining will involve meeting or talking to someone first, in order to maintain the safety and privacy of our families. Once we’ve verified that you are a real human, interested in or currently homeschooling in the Seattle area, you are eligible to join the LHH Google Group, LHH Facebook Group, and Seattle Homeschool Group (SHG) network. If you don’t hear back from us within 5 days, be sure to check your spam/junk folder in case our response email landed there."""
 
@@ -23,7 +23,7 @@ registration.question07.answer = """Registration typically starts 4 to 6 weeks b
 
 There are three ways to register for classes:
 
-1. **Online:** Visit the <a class="text state label-large" href="https://anc.apm.activecommunities.com/seattle/activity/search?activity_select_param=2&amp;activity_keyword=homeschool&amp;viewMode=list" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a>
+1. **Online:** Visit the <a class="text state label-large" href="https://anc.apm.activecommunities.com/seattle/activity/search?activity_select_param=2&center_ids=24&activity_keyword=homeschool&viewMode=list" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a>
 2. **By phone:** Call the Loyal Heights Community Center at (206) 684-4052.
 3. **In person:** Go to any Seattle Community Center and register in person at the front desk.
 
@@ -73,4 +73,4 @@ parents.question14.answer = """**Community Center classes:** This decision is up
 **Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
 
 parents.question15.question = "Can I come to hang out with LHH without signing up for classes?"
-parents.question15.answer = """Yes! Homeschooling families are welcome to spend time with us at the Loyal Heights Community Center and playground. Please check the current schedule. The community center is an inviting space with a play area for babies and toddlers, and a sitting area where parents like to sit and hang out. Outside, there is a large grassy area, playground, a small basketball court, and a large turf field. If you plan to come for the first time, please let us know ahead of time, so that we can greet you and show you around. <a class="text state label-large" href="/#contact-form">Contact us</a> through the form on our homepage or email us at loyalheightshomeschool@gmail.com."""
+parents.question15.answer = """Yes! Homeschooling families are welcome to spend time with us at the Loyal Heights Community Center and playground. Please check the current schedule. The community center is an inviting space with a play area for babies and toddlers, and a sitting area where parents like to sit and hang out. Outside, there is a large grassy area, playground, a small basketball court, and a large turf field. If you plan to come for the first time, please let us know ahead of time, so that we can greet you and show you around. Email us at loyalheightshomeschool@gmail.com."""

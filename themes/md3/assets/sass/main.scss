@@ -39,6 +39,11 @@ input[type=checkbox], input[type=radio] {
 	position: absolute;
 }
 
+.banner {
+	width: 100%;
+	padding-bottom: 24px;
+}
+
 @media (width <= 599px) {
 	body {
 		padding: 80px 16px 16px;
