@@ -13,7 +13,7 @@ about.question04.question = "What ages does this program serve?"
 about.question04.answer = "Our community is open to homeschooling families of all ages who are interested in in-person community and classes centered around the Loyal Heights neighborhood. Classes that are part of our program serve students from ages 3-18."
 
 about.question05.question = "What is SHG? Are you the same as SHG?"
-about.question05.answer = """The <a class="text state label-large" href="https://www.seattlehomeschoolgroup.org/" target="_blank" rel="noreferrer noopener">Seattle Homeschool Group</a> is an informal network of Seattle-area homeschool families. LHH families are a subset of SHG. When you join LHH, you will also be added to the SHG network. SHG families are welcome to participate in LHH, but SHG is not an in-person community in and of itself. It is primarily an online network of Seattle homeschooling families."""
+about.question05.answer = """The <a href="https://www.seattlehomeschoolgroup.org/" target="_blank" rel="noreferrer noopener">Seattle Homeschool Group</a> is an informal network of Seattle-area homeschool families. LHH families are a subset of SHG. When you join LHH, you will also be added to the SHG network. SHG families are welcome to participate in LHH, but SHG is not an in-person community in and of itself. It is primarily an online network of Seattle homeschooling families."""
 
 about.question06.question = "What is the LHH Committee?"
 about.question06.answer = """The LHH Committee is a group of parent volunteers who plan and run the LHH Program. In addition to putting together the schedule of classes for each quarter, the committee manages all our communications and plans community events throughout the year. You can reach us by email at loyalheightshomeschool@gmail.com."""
@@ -23,7 +23,7 @@ registration.question07.answer = """Registration typically starts 4 to 6 weeks b
 
 There are three ways to register for classes:
 
-1. **Online:** Visit the <a class="text state label-large" href="https://anc.apm.activecommunities.com/seattle/activity/search?activity_select_param=2&center_ids=24&activity_keyword=homeschool&viewMode=list" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a>
+1. **Online:** Visit the <a href="https://anc.apm.activecommunities.com/seattle/activity/search?activity_select_param=2&center_ids=24&activity_keyword=homeschool&viewMode=list" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a>
 2. **By phone:** Call the Loyal Heights Community Center at (206) 684-4052.
 3. **In person:** Go to any Seattle Community Center and register in person at the front desk.
 
@@ -36,7 +36,7 @@ The primary income-earner in your household is the person who should fill out th
 
 If you wish to use funds to register for classes, you must be approved PRIOR to registering. Approval can take up to several weeks. Applying early helps ensure you will get the funds, if you are eligible. Sometimes, they do not have enough funds to meet the demand and in those instances, scholarships are granted on a first come, first served basis.
 
-Visit the <a class="text state label-large" href="https://www.seattle.gov/parks/scholarships-and-financial-aid" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a> for eligibility guidelines, application form, and other information."""
+Visit the <a href="https://www.seattle.gov/parks/scholarships-and-financial-aid" target="_blank" rel="noreferrer noopener">Seattle Parks and Recreation website</a> for eligibility guidelines, application form, and other information."""
 
 registration.question09.question = "Can my child register for classes if they are outside the stated age range?"
 registration.question09.answer = """**Community Center classes:** Students outside the age range need teacher approval. Teachers make the age variance policy for their classes. If approved, the teacher lets the community center staff know the full name of the student and the parent will need to register the student in person or by calling the Loyal Heights Community Center at (206) 684-4052. Online registration will not allow age variances.
@@ -47,7 +47,7 @@ registration.question10.question = "Are there waitlists for classes that are ful
 registration.question10.answer = "If a class is full, a waitlist will be started. If space becomes available, you will be notified and can register at that time by phone or in person. In some cases, class limits may be expanded, and withdrawals do occasionally occur."
 
 registration.question11.question = "I changed my mind and want to withdraw from a class I’ve signed up for. Can I get a refund?"
-registration.question11.answer = """**Community Center classes:** A refund is available if a student drops the class before the second class. You will receive a prorated refund, minus service charge. See the <a class="text state label-large" href="https://www.seattle.gov/parks/reserve/refunds-reductions-and-waivers" rel="noreferrer noopener" target="_blank">Seattle Parks and Recreation Refund Policy</a> for more details.
+registration.question11.answer = """**Community Center classes:** A refund is available if a student drops the class before the second class. You will receive a prorated refund, minus service charge. See the <a href="https://www.seattle.gov/parks/reserve/refunds-reductions-and-waivers" rel="noreferrer noopener" target="_blank">Seattle Parks and Recreation Refund Policy</a> for more details.
 
 **Offsite classes:** Each of our partners who offer classes offsite will have their own policies. Please check directly with them."""
 
@@ -56,7 +56,7 @@ registration.question12.answer = """At LHH, we use a combination of approaches t
 
 **Air flow and filtration:** The community center has HEPA filters in two classrooms, and we will leave the windows open in the 3rd classroom and lobby. Please plan to layer in case of cooler weather.  
 
-**Stay home when sick:** As much as we love to be together, we ask that people stay home when symptomatic with a viral infection. For guidance, see this <a class="text state label-large" rel="noreferrer noopener" target="_blank" href="https://doh.wa.gov/sites/default/files/2023-02/420456-COVID19DecisionTrees.pdf">Symptom and Exposure Flowchart</a>
+**Stay home when sick:** As much as we love to be together, we ask that people stay home when symptomatic with a viral infection. For guidance, see this <a rel="noreferrer noopener" target="_blank" href="https://doh.wa.gov/sites/default/files/2023-02/420456-COVID19DecisionTrees.pdf">Symptom and Exposure Flowchart</a>
 
 **Masks are optional:** While masks are not required at the community center, please respect those who choose to wear one. If you see someone wearing a mask, consider they may: have unvaccinated family members, feel ill and not want to get you sick, be immuno-compromised, have high-risk loved ones, or prefer to wear a mask. Please be kind and respect everyone’s choice. The community center has a supply of adult size masks available for use.
 

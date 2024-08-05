@@ -1,18 +1,19 @@
 @use "elevation";
+@use "mycolor";
 
 .small-top-app-bar {
-	background-color: white;
+	background-color: mycolor.$surface;
 	display: flex;
 	flex-flow: row nowrap;
 	place-content: center;
 	place-items: center;
-	gap: 8px;
+	gap: 4px;
+	max-width: 1136px;
 	width: 100%;
+	margin: 0 auto;
 	position: fixed;
 	height: 64px;
-	padding: 0 32px;
 	top: 0;
-	left: 0;
 	z-index: 3;
 	& h1 {
 		flex-grow: 1;
@@ -21,17 +22,55 @@
 		flex-grow: 1;
 	}
 }
-
-.home-link {
-	color: var(--primary);
-	& .large-icon {
-		fill: var(--on-primary);
-		background-color: var(--primary);
+@media (width < 1200px) {
+	.small-top-app-bar {
+		width: calc(100% - 64px);
 	}
 }
+.link,
+.menu {
+	color: mycolor.$on-surface;
+	border-radius: 12px;
+	height: 48px;
+	min-width: 48px;
+	padding: 0 8px;
+	gap: 8px;
+	min-width: max-content;
 
-@media (800px <= width) {
-	.menu.button {
+	font-weight: bold;
+
+	cursor: pointer;
+	appearance: none;
+	text-decoration: none;
+
+	display: flex;
+	flex-flow: row nowrap;
+	place-content: center;
+	place-items: center;
+
+	&:hover {
+		@include elevation.level1;
+		text-decoration: none;
+	}
+	@include mycolor.surface-state;
+}
+.menu {
+	background-color: mycolor.$surface;
+}
+
+.large-icon {
+	height: 32px;
+	width: 32px;
+	fill: mycolor.$primary;
+}
+.small-icon {
+	height: 24px;
+	width: 24px;
+	fill: mycolor.$on-surface;
+}
+
+@media (840px <= width) {
+	.menu {
 		display: none;
 	}
 	.dropdown {
@@ -43,14 +82,13 @@
 	}
 }
 
-@media (width <= 799px) {
-
+@media (width < 840px) {
 	.dropdown {
-		background-color: white;
+		background-color: mycolor.$surface;
 		position: absolute;
-		right: 24px;
+		right: 0;
 		display: none;
-		top: 52px;
+		top: 56px;
 		flex-direction: column;
 		padding: 8px;
 		gap: 8px;
@@ -62,5 +100,38 @@
 		&:focus-within .dropdown {
 			display: flex;
 		}
+	}
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 32px;
+}
+@media (1200px < width) {
+	.large-icon {
+		height: 36px;
+		width: 36px;
+	}
+}
+@media (840px <= width < 1200px) {
+	h1 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.large-icon {
+		height: 34px;
+		width: 34px;
+	}
+}
+@media (480px <= width < 840px) {
+	h1 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+@media (width < 480px) {
+	h1 {
+		font-size: 20px;
+		line-height: 20px;
 	}
 }

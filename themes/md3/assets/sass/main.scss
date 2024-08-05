@@ -1,6 +1,5 @@
 @use "mycolor";
 @use "elevation";
-@use "font";
 
 @use "small-top-app-bar";
 @use "schedule";
@@ -61,6 +60,10 @@ input[type=checkbox], input[type=radio] {
 }
 strong {
 	font-weight: bold;
+}
+ul,
+ol {
+	padding-left: 20px;
 }
 .banner {
 	width: 100%;
@@ -127,15 +130,6 @@ strong {
 		right: 32px;
 	}
 }
-.large-icon {
-	height: 32px;
-	width: 32px;
-}
-.small-icon {
-	height: 18px;
-	width: 18px;
-}
-
 a {
 	color: mycolor.$primary;
 
@@ -151,29 +145,24 @@ a {
 		text-decoration: underline;
 	}
 }
-
 .calendar {
 	max-width: var(--body-content-width);
 	height: 80vh;
 	width: 100%;
 	margin: 0 auto;
 }
-
 .class-description {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	scroll-margin-top: 88px;
+	scroll-margin-top: 68px;
 	padding: 16px;
 	border-radius: 12px;
-	border: 1px solid var(--outline);
+	@include mycolor.outline;
 }
-
 .enroll {
 	align-self: flex-start;
 }
-
-
 .text-field {
 	position: relative;
 	width: 100%;

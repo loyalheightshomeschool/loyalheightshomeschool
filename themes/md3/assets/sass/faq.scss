@@ -8,27 +8,14 @@
 	gap: 12px;
 }
 
-.faq-page {
-	max-width: var(--body-content-width);
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	width: 100%;
-}
-
 .faq {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
-
-	& ol {
-		margin-left: 16px;
-	}
 }
 
 .faq-heading {
-	scroll-margin-top: 72px;
+	scroll-margin-top: 68px;
 }
 
 .answer {

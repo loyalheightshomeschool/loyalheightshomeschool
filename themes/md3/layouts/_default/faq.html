@@ -1,11 +1,11 @@
 {{ define "main" }}
 
 {{ $questionCount := 1 }}
-<div class="faq-page">
+
 {{ with .Site.Data.faqs }}
 	{{ range $k, $v := (dict "About Us" .about "Classes and Registration" .registration "For the Parents" .parents) }}
 
-	<h3 id="{{ replaceRE `([^a-zA-Z]+)` "-" (lower $k) }}" class="headline-medium faq-heading">{{ $k }}</h3>
+	<h3 id="{{ replaceRE `([^a-zA-Z]+)` "-" (lower $k) }}" class="faq-heading">{{ $k }}</h3>
 	<div class="questionsAnswers">
 		{{ range $v }}
 		<div class="faq">
@@ -23,6 +23,5 @@
 	</div>
 	{{ end }}
 {{ end }}
-</div>
 
 {{ end }}
