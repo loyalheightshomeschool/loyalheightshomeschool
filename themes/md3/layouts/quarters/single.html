@@ -138,7 +138,7 @@ For more information on registering, see our <a class="text state label-large" h
 							{{ end }}
 						{{ end }}
 
-						<div class="row1 surface-dim" style="grid-column-start: {{ $roomCount }}; grid-column-end: {{ add $roomCount $classesAtTimeInRoom }}">{{ . }}</div>
+						<div class="row1 surface-dim label-medium" style="grid-column-start: {{ $roomCount }}; grid-column-end: {{ add $roomCount $classesAtTimeInRoom }}">{{ . }}</div>
 						
 						{{ $roomColumnStart = $roomColumnStart | merge (dict . $roomCount) }}
 						{{ $roomColumnEnd = $roomColumnEnd | merge (dict . (add $roomCount $classesAtTimeInRoom )) }}
@@ -153,7 +153,7 @@ For more information on registering, see our <a class="text state label-large" h
 
 				{{ range seq 1000 }}
 				  
-					<div class="col1 surface-dim" style="grid-row: {{ $timeCount }};">{{ time.Format "3:04" $time }}</div>
+					<div class="col1 surface-dim label-medium" style="grid-row: {{ $timeCount }};">{{ time.Format "3:04" $time }}</div>
 
 					{{ if eq ( mod $timeCount 2 ) 0 }}
 					<div class="horizontal-bar surface-container" style="grid-column-start: 1; grid-column-end: {{ $roomCount }}; grid-row: {{ $timeCount }};"></div>
@@ -197,7 +197,7 @@ For more information on registering, see our <a class="text state label-large" h
 														{{ end }}
 														grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 														grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};"
-											class="non-class secondary-container outline title-small">{{ $name }}</div>
+											class="non-class secondary-container outline label-medium">{{ $name }}</div>
 							{{ else }}
 								<a class="class secondary-container state outline" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 													grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};
@@ -210,7 +210,7 @@ For more information on registering, see our <a class="text state label-large" h
 													{{ end }}
 													"
 										href="#{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}">
-									<div class="title-small">{{ $name }}{{ with (index $value "status") }} <mark class="error-container">{{ . }}</mark>{{ end }}</div>
+									<div class="label-medium">{{ $name }}{{ with (index $value "status") }} <mark class="error-container">{{ . }}</mark>{{ end }}</div>
 									{{ with (index $value "teacher") }}<div class="teacher">{{ . }}</div>{{ end }}
 									{{ with (index $value "startAge") }}
 										<div class="ages">Ages: {{ . }}

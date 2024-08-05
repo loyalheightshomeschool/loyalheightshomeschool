@@ -4,6 +4,7 @@
   <body class="surface">
     {{ partial "header.html" . }}
     <main>
+      <img class="banner" src="/banner.jpg">
       <h2 class="headline-large page-heading">{{ .Title }}</h2>
       {{ block "main" . }}{{ end }}
     </main>
