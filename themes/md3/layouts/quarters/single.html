@@ -94,16 +94,14 @@
 	{{ end }}
 {{ end }}
 
-<div>
-	{{ with .Params.dates }}<div class="dates title-medium surface-dim">{{ . }}</div>{{ end }}
-	{{ with .Params.register }}<div class="registration body-large">Registration opens <span class="title-medium">{{ . }}</span> at noon.</div>{{ end }}
-</div>
+{{ with .Params.dates }}<p><strong>{{ . }}</strong></p>{{ end }}
+{{ with .Params.register }}<p><strong>Registration opens {{ . }} at noon.</strong></p>{{ end }}
 
-<p class="class-page-addendum">
+<p>
 The LHH Committee sends reminders through our Facebook Group and Google Group to spread the word about registering. Classes can fill quickly, so it is best to register early. In cases of low enrollment, classes may be canceled up to two weeks before the session begins. For the sake of the teachers and other students, please try to register early!
 </p>
 
-<p class="class-page-addendum">
+<p>
 For more information on registering, see our <a class="text state label-large" href="/faq#classes-and-registration">FAQ</a>
 </p>
 
@@ -113,7 +111,7 @@ For more information on registering, see our <a class="text state label-large" h
 	{{ range slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" }}
 		{{ if (index $daysRoomsTimes .) }}
 			<input class="tab" type="radio" name="tabs" id="{{ . }}"{{ if eq . "Wednesday" }} checked{{ end }}>
-			<label class="label-large tertiary-container state outline" for="{{ . }}">
+			<label for="{{ . }}">
 				{{ substr . 0 3 }}
 				<span class="weekday-suffix">{{ substr . 3 }}</span>
 			</label>
@@ -138,7 +136,7 @@ For more information on registering, see our <a class="text state label-large" h
 							{{ end }}
 						{{ end }}
 
-						<div class="row1 surface-dim label-medium" style="grid-column-start: {{ $roomCount }}; grid-column-end: {{ add $roomCount $classesAtTimeInRoom }}">{{ . }}</div>
+						<div class="row1" style="grid-column-start: {{ $roomCount }}; grid-column-end: {{ add $roomCount $classesAtTimeInRoom }}">{{ . }}</div>
 						
 						{{ $roomColumnStart = $roomColumnStart | merge (dict . $roomCount) }}
 						{{ $roomColumnEnd = $roomColumnEnd | merge (dict . (add $roomCount $classesAtTimeInRoom )) }}
@@ -153,10 +151,10 @@ For more information on registering, see our <a class="text state label-large" h
 
 				{{ range seq 1000 }}
 				  
-					<div class="col1 surface-dim label-medium" style="grid-row: {{ $timeCount }};">{{ time.Format "3:04" $time }}</div>
+					<div class="col1" style="grid-row: {{ $timeCount }};">{{ time.Format "3:04" $time }}</div>
 
 					{{ if eq ( mod $timeCount 2 ) 0 }}
-					<div class="horizontal-bar surface-container" style="grid-column-start: 1; grid-column-end: {{ $roomCount }}; grid-row: {{ $timeCount }};"></div>
+					<div class="horizontal-bar" style="grid-column-start: 1; grid-column-end: {{ $roomCount }}; grid-row: {{ $timeCount }};"></div>
 					{{ end }}
 
 					{{ $timeRow = $timeRow | merge (dict (string $time) $timeCount) }}
@@ -171,7 +169,7 @@ For more information on registering, see our <a class="text state label-large" h
 				  {{ end }}
 				{{ end }}
 
-				<div class="shim surface" style="grid-row-start: 1; grid-row-end: {{ $timeCount }};"></div>
+				<div class="shim" style="grid-row-start: 1; grid-row-end: {{ $timeCount }};"></div>
 
 				{{ range $room, $times := $roomsTimes }}
 					{{ range $time, $classes := $times }}
@@ -197,9 +195,9 @@ For more information on registering, see our <a class="text state label-large" h
 														{{ end }}
 														grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 														grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};"
-											class="non-class secondary-container outline label-medium">{{ $name }}</div>
+											class="non-class">{{ $name }}</div>
 							{{ else }}
-								<a class="class secondary-container state outline" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
+								<a class="class" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 													grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};
 													{{ if eq $classCount 1 }}
 														grid-column-start: {{ index $roomColumnStart $room }};
@@ -210,7 +208,7 @@ For more information on registering, see our <a class="text state label-large" h
 													{{ end }}
 													"
 										href="#{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}">
-									<div class="label-medium">{{ $name }}{{ with (index $value "status") }} <mark class="error-container">{{ . }}</mark>{{ end }}</div>
+									<div class="class-name">{{ $name }}{{ with (index $value "status") }} <mark>{{ . }}</mark>{{ end }}</div>
 									{{ with (index $value "teacher") }}<div class="teacher">{{ . }}</div>{{ end }}
 									{{ with (index $value "startAge") }}
 										<div class="ages">Ages: {{ . }}
@@ -238,22 +236,21 @@ For more information on registering, see our <a class="text state label-large" h
 {{ if or .Params.schedule .Params.descriptions }}
 	<div class="download-links">
 		{{ if .Params.schedule }}
-			<a class="secondary-container state button label-large" rel="noreferrer noopener" target="_blank" href="{{ .Params.schedule }}">Download Class Schedule</a>
+			<a class="button" rel="noreferrer noopener" target="_blank" href="{{ .Params.schedule }}">Download Class Schedule</a>
 		{{ end }}
 		{{ if .Params.descriptions }}
-			<a class="secondary-container state button label-large" rel="noreferrer noopener" target="_blank" href="{{ .Params.descriptions }}">Download Class Descriptions</a>
+			<a class="button" rel="noreferrer noopener" target="_blank" href="{{ .Params.descriptions }}">Download Class Descriptions</a>
 		{{ end }}
 	</div>
 {{ end }}
 
-<div class="class-description-container">
-	{{ range $quarterClasses }}
+{{ range $quarterClasses }}
 		{{ $name := index . "name" }}
 		{{ if not (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play")) }}
-			<div id="{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}" class="surface-container-highest state outline class-description">
-				<h6 class="title-large">{{ $name }}{{ with (index . "status") }} - <mark class="error-container">{{ . }}</mark>{{ end }}</h6>
+			<div id="{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}" class="class-description">
+				<h4>{{ $name }}{{ with (index . "status") }} - <mark>{{ . }}</mark>{{ end }}</h4>
 				{{ if or (index . "teacher") (index . "ages") (index . "maxStudents") (index . "price") (index . "condition") (index . "exceptions") (index . "location") }}
-					<div class="info">
+					<div>
 						{{ with (index . "teacher")}}Instructor: {{ . }}{{ end }}
 						{{ if (index . "startAge") }}
 							<br>Ages: {{ index . "startAge" }}
@@ -270,16 +267,14 @@ For more information on registering, see our <a class="text state label-large" h
 						{{ with (index . "location")}}<br>Location: {{ . }}{{ end }}
 					</div>
 				{{ end }}
-				<div class="description">{{ index . "description" }}</div>
+				<div>{{ index . "description" }}</div>
 				{{ with (index . "link") }}
-					<hr class="divider">
-					<a class="enroll primary state button label-large" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
+					<a class="enroll button" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
 				{{ end }}
 			</div>
 		{{ end }}
 	{{ end }}
-</div>
 
-<a class="primary-container state fab label-large" href="#schedule">&#8593;</a>
+<a class="fab" href="#schedule">&#8593;</a>
 
 {{ end }}

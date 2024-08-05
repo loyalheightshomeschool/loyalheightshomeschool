@@ -1,6 +1,7 @@
 @use "elevation";
 
 .small-top-app-bar {
+	background-color: white;
 	display: flex;
 	flex-flow: row nowrap;
 	place-content: center;
@@ -9,16 +10,23 @@
 	width: 100%;
 	position: fixed;
 	height: 64px;
-	padding: 0 24px;
+	padding: 0 32px;
 	top: 0;
 	left: 0;
 	z-index: 3;
-	@include elevation.level1;
-	& .headline {
+	& h1 {
 		flex-grow: 1;
 	}
 	& > a {
 		flex-grow: 1;
+	}
+}
+
+.home-link {
+	color: var(--primary);
+	& .large-icon {
+		fill: var(--on-primary);
+		background-color: var(--primary);
 	}
 }
 
@@ -38,14 +46,15 @@
 @media (width <= 799px) {
 
 	.dropdown {
+		background-color: white;
 		position: absolute;
-		right: 0;
+		right: 24px;
 		display: none;
 		top: 52px;
 		flex-direction: column;
 		padding: 8px;
 		gap: 8px;
-		@include elevation.level2;
+		@include elevation.level1;
 	}
 	nav {
 		&:hover .dropdown,
