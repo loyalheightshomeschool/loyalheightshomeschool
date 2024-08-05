@@ -5,29 +5,26 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	gap: 12px;
+	gap: 16px;
 }
-
 .faq {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
-
 .faq-heading {
 	scroll-margin-top: 68px;
 }
-
 .answer {
-	border-radius: 12px;
 	padding: 16px;
 	display: none;
+	flex-direction: column;
+	gap: 8px;
 }
-
 .question + label {
 	border-radius: 12px;
-	min-height: 40px;
-	padding: 7px 16px;
+	min-height: 48px;
+	padding: 0 16px;
 
 	display: grid;
 	grid-template-columns: 1fr min-content;
@@ -40,6 +37,10 @@
 	cursor: pointer;
 	appearance: none;
 	text-decoration: none;
+	font-weight: bold;
+
+	@include mycolor.bar;
+	@include mycolor.bar-state;
 
 	&:hover {
 		@include elevation.level1;
@@ -61,28 +62,18 @@
 
 .question:checked ~ .answer {
 	display: flex;
-	flex-direction: column;
-	gap: 8px;
 }
-
 .question + label:hover {
-	background-color: color-mix(in srgb, var(--secondary-container) 92%, var(--on-secondary-container) 8%);
+	@include mycolor.bar-state;
 }
 .question:target + label,
 .question:focus + label {
-	background-color: color-mix(in srgb, var(--secondary-container) 90%, var(--on-secondary-container) 10%);
+	background-color: color-mix(in srgb, mycolor.$bar 90%, mycolor.$bar 10%);
 }
 .question:checked + label {
-	background-color: var(--secondary);
-	color: var(--on-secondary);
-	fill: var(--on-secondary);
-	&:hover {
-		background-color: color-mix(in srgb, var(--secondary) 92%, var(--on-secondary) 8%);
-	}
-	&:active {
-		background-color: color-mix(in srgb, var(--secondary) 90%, var(--on-secondary) 10%);
-	}
+	@include mycolor.block;
+	@include mycolor.block-state;
 }
 .question:checked:focus + label {
-	background-color: color-mix(in srgb, var(--secondary) 90%, var(--on-secondary) 10%);
+	background-color: color-mix(in srgb, mycolor.$block 90%, mycolor.$block 10%);
 }

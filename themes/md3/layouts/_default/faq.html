@@ -10,11 +10,11 @@
 		{{ range $v }}
 		<div class="faq">
 			<input class="question" type="checkbox" id="question{{ $questionCount }}">
-			<label class="secondary-container state title-medium" for="question{{ $questionCount }}">
+			<label for="question{{ $questionCount }}">
 				{{ .question | markdownify }}
 				<div class="open">▼</div><div class="close">▲</div>
 			</label>
-			<div class="answer surface-container-highest body-large">
+			<div class="answer">
 				{{ $opts := dict "display" "block" }}{{ .answer | $.Page.RenderString $opts }}
 			</div>
 		</div>

@@ -6,6 +6,8 @@ $surface: white;
 $on-surface: black;
 $primary: #1E6586;
 $on-primary: white;
+$bar: #F0F0F0;
+$block: gainsboro;
 
 :root {
 	--error: #BA1A1A;
@@ -49,11 +51,30 @@ $on-primary: white;
 }
 
 @mixin bar {
-	background-color: whitesmoke;
+	background-color: $bar;
 }
 @mixin block {
-	background-color: gainsboro;
+	background-color: $block;
 }
+@mixin bar-state {
+	&:hover {
+		background-color: color-mix(in srgb, $bar 92%, black 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, $bar 90%, black 10%);
+	}
+}
+@mixin block-state {
+	&:hover {
+		background-color: color-mix(in srgb, $block 92%, black 8%);
+	}
+	&:focus,
+	&:active {
+		background-color: color-mix(in srgb, $block 90%, black 10%);
+	}
+}
+
 @mixin secondary {
 	background-color: $secondary;
 	color: $on-secondary;
