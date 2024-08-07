@@ -267,7 +267,7 @@ For more information on registering, see our <a class="text state label-large" h
 						{{ with (index . "location")}}<br>Location: {{ . }}{{ end }}
 					</div>
 				{{ end }}
-				<div>{{ index . "description" }}</div>
+				<div>{{ (index . "description") | $.Page.RenderString }}</div>
 				{{ with (index . "link") }}
 					<a class="enroll button" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
 				{{ end }}
