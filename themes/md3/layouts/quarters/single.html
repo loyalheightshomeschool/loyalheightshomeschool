@@ -268,8 +268,10 @@ For more information on registering, see our <a class="text state label-large" h
 					</div>
 				{{ end }}
 				<div>{{ (index . "description") | $.Page.RenderString }}</div>
-				{{ with (index . "link") }}
-					<a class="enroll button" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
+				{{ if or (not (eq (index . "status") "Full")) (eq (index . "status") "Canceled") }}
+					{{ with (index . "link") }}
+						<a class="enroll button" rel="noreferrer noopener" target="_blank" href="{{ . }}">Enroll</a>
+					{{ end }}
 				{{ end }}
 			</div>
 		{{ end }}
