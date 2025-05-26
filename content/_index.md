@@ -4,11 +4,32 @@ title = 'Welcome!'
 
 Loyal Heights Homeschool Program (LHH) is a community of homeschooling families who gather each week to learn and play. We offer classes and social activities from September to May and a chance for families to play and connect with other homeschoolers. Please join us; we look forward to meeting you!
 
+### Summer 2025 Hangouts
+
+- June 4: 1 PM - 3 PM - Discovery Park Playground
+- June 11: 11 AM - 1 PM - Salmon Bay Playground - LHH Annual Epic Capture the Flag
+- June 18: 11 AM - 1 PM - Seattle Center Playground
+- June 25: 10 AM - 1 PM - Low Tide Walk - Richmond Saltwater Beach
+- July 2: 11 AM - 2 PM - Explore Kubota Gardens
+- July 9: 12 PM - 2 PM - Board Games at Around the Table Boardgame Pub
+- July 16: 1 PM - 3 PM - Green Lake Wading Pool
+- July 23: 11 AM - 1 PM - Explore Discovery Park - meet at North Parking Lot
+- July 30:
+- August 6: 1 PM - 3 PM - Volunteer Park Playground and Wading Pool
+- August 12: noon, register for fall classes
+- August 13: 1 PM - 3 PM - Board Games and Park Play - Greenwood Library
+- August 20: 11 AM - 1 PM - Beach Play Day - Golden Gardens
+- August 27: 10:30 AM - Noon - Salmon Bay Playground
+- Sept 3: Park Day, time and location TBD
+- Sept 10: 11 AM - 1 PM - Foxtails and Eagle Eye - Carkeek Park
+
+<a href="https://calendar.google.com/calendar/u/0?cid=MDY2NGFkZTU0ZDkxMjljZGFiZGI0MWU4NDczYWQwZDM4ODdiNzQ1Y2EyMzkxMTU3NDg4OWQwY2U5MjVjZGI1MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" rel="noreferrer noopener" target="_blank">Subscribe to Calendar</a>
+
 ### Upcoming Quarters
 
-- [Fall 2024](/quarters/fall-2024-classes): September 16 - November 15, 2024 (9 weeks, no break)
-- [Winter 2025](/quarters/winter-2025-classes): January 6 - March 14, 2025 (9 weeks, no classes February 17 - 21)
-- [Spring 2025](/quarters/spring-2025-classes): March 24 - May 30, 2025 (9 weeks, no classes April 14 - 18)
+- [Fall 2025](/quarters/fall-2025-classes): September 17 - November 12, 2024 (9 weeks, no break)
+- [Winter 2026](/quarters/winter-2026-classes): January 7 - March 11, 2025 (9 weeks, no classes February 18)
+- [Spring 2026](/quarters/spring-2026-classes): March 25 - May 27, 2025 (9 weeks, no classes April 15)
 
 ### Contact
 
