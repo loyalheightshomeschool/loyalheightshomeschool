@@ -23,7 +23,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - Sept 3: Park Day, time and location TBD
 - Sept 10: 11 AM - 1 PM - Foxtails and Eagle Eye - Carkeek Park
 
-<a href="https://calendar.google.com/calendar/u/0?cid=MDY2NGFkZTU0ZDkxMjljZGFiZGI0MWU4NDczYWQwZDM4ODdiNzQ1Y2EyMzkxMTU3NDg4OWQwY2U5MjVjZGI1MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" rel="noreferrer noopener" target="_blank">Subscribe to Calendar</a>
+<a href="https://calendar.google.com/calendar/embed?src=0664ade54d9129cdabdb41e8473ad0d3887b745ca23911574889d0ce925cdb51%40group.calendar.google.com&ctz=America%2FVancouver" rel="noreferrer noopener" target="_blank">Google Calendar</a>
 
 ### Upcoming Quarters
 
