@@ -14,7 +14,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - July 9: 12 PM - 2 PM - Board Games at Around the Table Boardgame Pub
 - July 16: 1 PM - 3 PM - Green Lake Wading Pool
 - July 23: 11 AM - 1 PM - Explore Discovery Park - meet at North Parking Lot
-- July 30:
+- July 30: 11 AM - 1 PM - Crafts, Board Games, and Bonus Closet Organizing Bonanza! - Loyal Heights Community Center, Room 4
 - August 6: 1 PM - 3 PM - Volunteer Park Playground and Wading Pool
 - August 12: noon, register for fall classes
 - August 13: 1 PM - 3 PM - Board Games and Park Play - Greenwood Library
