@@ -20,7 +20,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - August 13: 12:30 PM - 2 PM - Board Games and Park Play - Greenwood Library; after 2 PM hangout at Alice Ball Park next door
 - August 20: 11 AM - 1 PM - Beach Play Day - Golden Gardens
 - August 27: 10:30 AM - Noon - Salmon Bay Playground
-- Sept 3: Park Day, time and location TBD
+- Sept 3: TBD
 - Sept 10: 11 AM - 1 PM - Foxtails and Eagle Eye - Carkeek Park
 
 <a href="https://calendar.google.com/calendar/embed?src=0664ade54d9129cdabdb41e8473ad0d3887b745ca23911574889d0ce925cdb51%40group.calendar.google.com&ctz=America%2FVancouver" rel="noreferrer noopener" target="_blank">Google Calendar</a>
