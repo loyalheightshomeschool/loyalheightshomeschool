@@ -27,9 +27,9 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 
 ### Upcoming Quarters
 
-- [Fall 2025](/quarters/fall-2025-classes): September 17 - November 12, 2024 (9 weeks, no break)
-- [Winter 2026](/quarters/winter-2026-classes): January 7 - March 11, 2025 (9 weeks, no classes February 18)
-- [Spring 2026](/quarters/spring-2026-classes): March 25 - May 27, 2025 (9 weeks, no classes April 15)
+- [Fall 2025](/quarters/fall-2025-classes): September 17 - November 12, 2025 (9 weeks, no break)
+- [Winter 2026](/quarters/winter-2026-classes): January 7 - March 11, 2026 (9 weeks, no classes February 18)
+- [Spring 2026](/quarters/spring-2026-classes): March 25 - May 27, 2026 (9 weeks, no classes April 15)
 
 ### Contact
 
