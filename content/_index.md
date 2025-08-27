@@ -19,7 +19,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - August 12: noon, register for fall classes
 - August 13: 12:30 PM - 2 PM - Board Games and Park Play - Greenwood Library; after 2 PM hangout at Alice Ball Park next door
 - August 20: 11 AM - 1 PM - Beach Play Day - Golden Gardens
-- August 27: 10:30 AM - Noon - Salmon Bay Playground
+- August 27: 11 AM - 1 PM - Loyal Heights Playground
 - Sept 3: TBD
 - Sept 10: 11 AM - 1 PM - Foxtails and Eagle Eye - Carkeek Park
 
