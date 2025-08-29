@@ -25,9 +25,6 @@
 				{{ end }}
 				{{ $value = time.AsTime (add "1899-12-30T" $hour ":" $minute ":00") }}
 			{{ end }}
-			{{ if eq $heading "weekday" }}
-				{{ $value = split $value ";" }}
-			{{ end }}
 			{{ $tempdict = $tempdict | merge (dict $heading $value) }}
 			{{ $count = $count | add 1 }}
 		{{ end }}
@@ -45,7 +42,7 @@
 
 {{ range $quarterClasses }}
 
-	{{ $wd := index . "weekday" }}
+	{{ $weekday := index . "weekday" }}
 	{{ $room := index . "room" }}
 	{{ $name := index . "name" }}
 	{{ $startTime := index . "startTime" }}
@@ -73,8 +70,6 @@
 		{{ end }}
 	{{ end }}
 
-	{{ range $wd }}
-		{{ $weekday := . }}
 		{{ if isset $daysRoomsTimes $weekday }}
 			{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
 			{{ if isset $tempRoomsTimes $room }}
@@ -97,7 +92,7 @@
 		{{ else }}
 			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name . )))) }}
 		{{ end }}
-	{{ end }}
+	
 {{ end }}
 
 {{ with .Params.dates }}<p><strong>{{ . }}</strong></p>{{ end }}
