@@ -42,7 +42,8 @@
 
 {{ range $quarterClasses }}
 
-	{{ $weekday := index . "weekday" }}
+	{{ $class := . }}
+	
 	{{ $room := index . "room" }}
 	{{ $name := index . "name" }}
 	{{ $startTime := index . "startTime" }}
@@ -70,27 +71,30 @@
 		{{ end }}
 	{{ end }}
 
-	{{ if isset $daysRoomsTimes $weekday }}
-		{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
-		{{ if isset $tempRoomsTimes $room }}
-			{{ $tempTimes := index $tempRoomsTimes $room }}
-			{{ if isset $tempTimes (string $startTime) }}
-				{{ $tempClasses := index $tempTimes (string $startTime) }}
-				{{ $tempClasses = $tempClasses | merge (dict $name .) }}
-				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) $tempClasses) }}
-				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
-				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+	{{ range (split (index . "weekday") ":") }}
+		{{ $weekday := . }}
+		{{ if isset $daysRoomsTimes $weekday }}
+			{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
+			{{ if isset $tempRoomsTimes $room }}
+				{{ $tempTimes := index $tempRoomsTimes $room }}
+				{{ if isset $tempTimes (string $startTime) }}
+					{{ $tempClasses := index $tempTimes (string $startTime) }}
+					{{ $tempClasses = $tempClasses | merge (dict $name $class) }}
+					{{ $tempTimes = $tempTimes | merge (dict (string $startTime) $tempClasses) }}
+					{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+					{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+				{{ else }}
+					{{ $tempTimes = $tempTimes | merge (dict (string $startTime) (dict $name $class )) }}
+					{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+					{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+				{{ end }}
 			{{ else }}
-				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) (dict $name . )) }}
-				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room (dict (string $startTime) (dict $name $class ))) }}
 				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
 			{{ end }}
 		{{ else }}
-			{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room (dict (string $startTime) (dict $name . ))) }}
-			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
+			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name $class )))) }}
 		{{ end }}
-	{{ else }}
-		{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name . )))) }}
 	{{ end }}
 {{ end }}
 
