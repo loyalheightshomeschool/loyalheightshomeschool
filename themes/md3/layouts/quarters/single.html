@@ -70,29 +70,28 @@
 		{{ end }}
 	{{ end }}
 
-		{{ if isset $daysRoomsTimes $weekday }}
-			{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
-			{{ if isset $tempRoomsTimes $room }}
-				{{ $tempTimes := index $tempRoomsTimes $room }}
-				{{ if isset $tempTimes (string $startTime) }}
-					{{ $tempClasses := index $tempTimes (string $startTime) }}
-					{{ $tempClasses = $tempClasses | merge (dict $name .) }}
-					{{ $tempTimes = $tempTimes | merge (dict (string $startTime) $tempClasses) }}
-					{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
-					{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
-				{{ else }}
-					{{ $tempTimes = $tempTimes | merge (dict (string $startTime) (dict $name . )) }}
-					{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
-					{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
-				{{ end }}
+	{{ if isset $daysRoomsTimes $weekday }}
+		{{ $tempRoomsTimes := index $daysRoomsTimes $weekday }}
+		{{ if isset $tempRoomsTimes $room }}
+			{{ $tempTimes := index $tempRoomsTimes $room }}
+			{{ if isset $tempTimes (string $startTime) }}
+				{{ $tempClasses := index $tempTimes (string $startTime) }}
+				{{ $tempClasses = $tempClasses | merge (dict $name .) }}
+				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) $tempClasses) }}
+				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
+				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
 			{{ else }}
-				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room (dict (string $startTime) (dict $name . ))) }}
+				{{ $tempTimes = $tempTimes | merge (dict (string $startTime) (dict $name . )) }}
+				{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room $tempTimes) }}
 				{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
 			{{ end }}
 		{{ else }}
-			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name . )))) }}
+			{{ $tempRoomsTimes = $tempRoomsTimes | merge (dict $room (dict (string $startTime) (dict $name . ))) }}
+			{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday $tempRoomsTimes) }}
 		{{ end }}
-	
+	{{ else }}
+		{{ $daysRoomsTimes = $daysRoomsTimes | merge (dict $weekday (dict $room (dict (string $startTime) (dict $name . )))) }}
+	{{ end }}
 {{ end }}
 
 {{ with .Params.dates }}<p><strong>{{ . }}</strong></p>{{ end }}
@@ -198,7 +197,6 @@ For more information on registering, see our <a class="text state label-large" h
 														grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};"
 											class="non-class">{{ $name }}</div>
 							{{ else }}
-							  {{ errorf "%q" (index $value "startTime") }}
 								<a class="class" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 													grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};
 													{{ if eq $classCount 1 }}
