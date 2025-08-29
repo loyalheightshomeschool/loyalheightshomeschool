@@ -203,6 +203,7 @@ For more information on registering, see our <a class="text state label-large" h
 														grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};"
 											class="non-class">{{ $name }}</div>
 							{{ else }}
+							  {{ errorf "%q" (index $value "startTime") }}
 								<a class="class" style="grid-row-start: {{ index $timeRow (string (index $value "startTime")) }};
 													grid-row-end: {{ index $timeRow (string (index $value "endTime")) }};
 													{{ if eq $classCount 1 }}
