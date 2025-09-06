@@ -262,3 +262,13 @@ a {
 		flex-direction: column;
 	}
 }
+
+@media print {
+	.banner,
+	header > nav,
+	main > p,
+	.enroll-button,
+	.fab {
+		display: none !important;
+	}
+}
