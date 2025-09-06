@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="/lhh-logo.png" type="image/png" />
 	<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s - %s" .Title site.Title }}{{ end }}</title>
-	<link href="css/print.css" media="print" rel="stylesheet" />
+	<link href="/css/print.css" media="print" rel="stylesheet" />
 	{{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" }}
 	{{ with resources.Get "sass/main.scss" | toCSS $opts | minify }}
 	<link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
