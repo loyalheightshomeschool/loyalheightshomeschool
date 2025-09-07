@@ -1,13 +1,10 @@
 @media print {
 	.banner,
-	header > nav,
-	main > p,
-	.enroll-button,
-	.fab {
+	main > p {
 		display: none !important;
 	}
 	@page {
-		size: 8.5in 11in;
+		size: 11in 8.5in;
 		margin: 0.6in;
 	}
 }

@@ -11,6 +11,14 @@
 	max-width: 100%;
 	row-gap: 8px;
 }
+@media print {
+	#schedule {
+		column-span: all;
+		break-after: always;
+		page-break-after: always;
+		display: block;
+	}
+}
 .schedule {
 	display: none;
 	gap: 4px;
@@ -23,6 +31,13 @@
 	grid-auto-rows: max-content;
 	max-width: 100%;
 	overflow-x: scroll;
+}
+@media print {
+	.schedule {
+		overflow-x: visible;
+		break-after: always;
+		page-break-after: always;
+	}
 }
 .shim {
 	position: sticky;
@@ -61,6 +76,13 @@
 	place-items: center;
 	text-transform: uppercase;
 }
+@media print {
+	.class, non-class {
+		padding: 4pt;
+		font-size: 10pt;
+		line-height: 12pt;
+	}
+}
 .class-name {
 	font-weight: bold;
 }
@@ -82,6 +104,11 @@
 }
 .row1 {
 	grid-row: 1;
+}
+@media print {
+	.col1, .row1 {
+		padding: 4pt;
+	}
 }
 .tab + label {
 	font-weight: bold;
@@ -115,6 +142,11 @@
 .tab:checked:focus + label {
 	background-color: color-mix(in srgb, mycolor.$secondary 90%, mycolor.$on-secondary 10%);
 }
+@media print {
+	.tab + label {
+		display: none;
+	}
+}
 @media (width < 840px) {
 	.weekday-suffix {
 		display: none;
@@ -125,3 +157,14 @@
 #Wednesday:checked ~ #WednesdaySchedule { display: grid; }
 #Thursday:checked ~ #ThursdaySchedule { display: grid; }
 #Friday:checked ~ #FridaySchedule { display: grid; }
+
+@media print {
+	#WednesdaySchedule {
+		grid-row: 1;
+		display: grid;
+	}
+	#FridaySchedule {
+		grid-row: 2;
+		display: grid;
+	}
+}
