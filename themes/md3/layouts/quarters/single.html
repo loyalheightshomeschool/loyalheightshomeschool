@@ -131,7 +131,7 @@ For more information on registering, see our <a class="text state label-large" h
 				{{ $roomCount := 2 }}
 				{{ $roomColumnStart := dict }}
 				{{ $roomColumnEnd := dict }}
-				{{ range slice "Room 1" "Room 2" "Room 3" "Room 4" "Gym" "Kitchen" "Outdoors" "Offsite" }}
+				{{ range slice "Room 1" "Room 2" "Room 3" "Room 4" "Room 6" "Gym" "Kitchen" "Outdoors" "Offsite" }}
 					{{ if index $roomsTimes . }}
 						{{ $classesAtTimeInRoom := 0 }}
 						{{ range $k, $v := (index $roomsTimes .) }}
