@@ -250,7 +250,7 @@ For more information on registering, see our <a class="text state label-large" h
 
 {{ range $quarterClasses }}
 		{{ $name := index . "name" }}
-		{{ if not (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play")) }}
+		{{ if not (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play") (eq $name "Teen Room")) }}
 			<div id="{{ replaceRE `([^a-zA-Z0-9]+)` "-" $name }}" class="class-description">
 				<h4>{{ $name }}{{ with (index . "status") }} - <mark>{{ . }}</mark>{{ end }}</h4>
 				{{ if or (index . "teacher") (index . "ages") (index . "maxStudents") (index . "price") (index . "condition") (index . "exceptions") (index . "location") }}
