@@ -183,7 +183,7 @@ For more information on registering, see our <a class="text state label-large" h
 
 						{{ range $name, $value := $classes }}
 
-							{{ if (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play")) }}
+							{{ if (or (eq $name "Break") (eq $name "Open Gym") (eq $name "Park Play") (eq $name "Teen Room")) }}
 								<div style="{{ if eq $name "Break" }}
 															grid-column-start: 2;
 															grid-column-end: {{ $roomCount }};
