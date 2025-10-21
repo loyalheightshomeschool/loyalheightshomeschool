@@ -76,7 +76,7 @@
 	fill: mycolor.$on-surface;
 }
 
-@media (900px <= width) {
+@media (940px <= width) {
 	.menu {
 		display: none;
 	}
@@ -89,7 +89,7 @@
 	}
 }
 
-@media (width < 900px) {
+@media (width < 940px) {
 	.dropdown {
 		background-color: mycolor.$surface;
 		position: absolute;
@@ -121,7 +121,7 @@ h1 {
 		width: 36px;
 	}
 }
-@media (900px <= width < 1200px) {
+@media (940px <= width < 1200px) {
 	h1 {
 		font-size: 28px;
 		line-height: 28px;
@@ -131,7 +131,7 @@ h1 {
 		width: 34px;
 	}
 }
-@media (480px <= width < 900px) {
+@media (480px <= width < 940px) {
 	h1 {
 		font-size: 24px;
 		line-height: 24px;
