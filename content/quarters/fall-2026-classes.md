@@ -1,0 +1,8 @@
++++
+title = 'Fall 2026 Classes'
+[params]
+	register = 'TBD'
+	dates = 'September 16 – November 18, 2026 (9 weeks, no classes November 11)'
+	schedule = '/pdf/lhh-fall-2027-class-schedule.pdf'
+	data = '2026 3 Fall'
++++
