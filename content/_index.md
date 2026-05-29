@@ -21,7 +21,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - Aug 5: 11a-1p, Beach Day @ Golden Gardens, meet @ south entrance
 - Aug 12: 10a-noon, BYO Board Games @ Lake Forest Park: Third Place Commons
 - Aug 19: TBD
-- Aug 26: AVAILABLE
+- Aug 26: TBD
 - Sep 2: 11a-2pm Art Day & Art Closet Clean-out @ Loyal Heights Community Center
 - Sep 9: 11a-1p Nature Games @ Carkeek field near playground
 
