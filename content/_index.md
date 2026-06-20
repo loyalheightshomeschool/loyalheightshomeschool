@@ -8,22 +8,21 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 
 <a href="https://calendar.google.com/calendar/u/0?cid=NGI5Y2RkNTU5NjhiOWJhMTcxMGY5MzM2NDA1ZGExZmZmOTVlNDQ3NDVkNDZhZWY1YzQ0Yzc4YjczZWE1Y2ZjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" rel="noreferrer noopener" target="_blank">Google Calendar</a>
 
-- June 3: 1p-3p, BYO Board Games @ Lake Forest Park: Third Place Commons
-
-- June 10: 11a-2p, Forest Ramble @ Discovery Park: meet at the North Lot
-- June 17: 11A-1P, Park Time @ Loyal Heights Community Center and Playground
-- June 24: TBD
-- July 1: AVAILABLE
-- July 8: 11a-2p, Park and playground time!, location TBD
-- July 15: 2p-4p, Wading Pool @ Greenlake
-- July 22: 10a-3p, Inspiration Playground and Spray Park and Light Rail Ride @ Bellevue, meet at Northgate Station at 10a or at Bellevue Inspiration Playground at 11:20a
-- July 29: 1p-3p, Water Play @ Edmonds Spray Park
-- Aug 5: 11a-1p, Beach Day @ Golden Gardens, meet @ south entrance
-- Aug 12: 10a-noon, BYO Board Games @ Lake Forest Park: Third Place Commons
+- June 3: 1 pm - 3 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
+- June 10: 11 am - 2 pm, Forest Ramble @ Discovery Park: meet at the North Lot
+- June 17: 11 am - 1 pm, Park Time @ Loyal Heights Community Center and Playground
+- June 24: 1 pm - 3 pm, Nature Scavenger Hunt @ Shoreline's Hamlin Park
+- July 1: 1 pm - 3 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
+- July 8: 11 am - 2 pm, Park and playground time!, location TBD
+- July 15: 2 pm - 4 pm, Wading Pool @ Greenlake
+- July 22: 10 am - 3 pm, Inspiration Playground and Spray Park and Light Rail Ride @ Bellevue, meet at Northgate Station at 10a or at Bellevue Inspiration Playground at 11:20a
+- July 29: 1 pm - 3 pm, Water Play @ Edmonds Spray Park
+- Aug 5: 11 am - 1 pm, Beach Day @ Golden Gardens, meet @ south entrance
+- Aug 12: 10 am - 12 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
 - Aug 19: TBD
-- Aug 26: TBD
-- Sep 2: 11a-2pm Art Day & Art Closet Clean-out @ Loyal Heights Community Center
-- Sep 9: 11a-1p Nature Games @ Carkeek field near playground
+- Aug 26: 11 am - 1 pm, Hike and Playground Play at St. Edward State Park (Discover Pass required to park on-site: https://discoverpass.wa.gov/
+- Sep 2: 11 am - 2 pm, Art Day & Art Closet Clean-out @ Loyal Heights Community Center
+- Sep 9: 11 am - 1 pm, Nature Games @ Carkeek field near playground
 
 ### Upcoming Quarters
 
