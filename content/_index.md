@@ -11,7 +11,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - June 3: 1 pm - 3 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
 - June 10: 11 am - 2 pm, Forest Ramble @ Discovery Park: meet at the North Lot
 - June 17: 11 am - 1 pm, Park Time @ Loyal Heights Community Center and Playground
-- June 24: 1 pm - 3 pm, Nature Scavenger Hunt @ Shoreline's Hamlin Park
+- June 24: 12 pm - 2 pm, Nature Scavenger Hunt @ Shoreline's Hamlin Park
 - July 1: 1 pm - 3 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
 - July 8: 11 am - 2 pm, Park and playground time!, location TBD
 - July 15: 2 pm - 4 pm, Wading Pool @ Greenlake
