@@ -13,7 +13,7 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - June 17: 11 am - 1 pm, Park Time @ Loyal Heights Community Center and Playground
 - June 24: 12 pm - 2 pm, Nature Scavenger Hunt @ Shoreline's Hamlin Park
 - July 1: 1 pm - 3 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
-- July 8: 11 am - 2 pm, Park and playground time!, location TBD
+- July 8: 11 am - 2 pm, Park and playground time @ Carkeek Beach
 - July 15: 2 pm - 4 pm, Wading Pool @ Greenlake
 - July 22: 10 am - 3 pm, Inspiration Playground and Spray Park and Light Rail Ride @ Bellevue, meet at Northgate Station at 10a or at Bellevue Inspiration Playground at 11:20a
 - July 29: 1 pm - 3 pm, Water Play @ Edmonds Spray Park
