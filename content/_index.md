@@ -17,9 +17,9 @@ Loyal Heights Homeschool Program (LHH) is a community of homeschooling families 
 - July 15: 2 pm - 4 pm, Wading Pool @ Greenlake
 - July 22: 10 am - 3 pm, Inspiration Playground and Spray Park and Light Rail Ride @ Bellevue, meet at Northgate Station at 10a or at Bellevue Inspiration Playground at 11:20a
 - July 29: ~~1 pm - 3 pm, Water Play @ Edmonds Spray Park~~ 11:30 am - 2:30 pm, Beach Play @ Edmonds Marina Beach Park
-- Aug 5: ~~11 am - 1 pm, Beach Day @ Golden Gardens, meet @ south entrance~~ 10 am - 12 pm, BYO Board Games @ Broadview Library
+- Aug 5: ~~11 am - 1 pm, Beach Play @ Golden Gardens, meet @ south entrance~~ 10 am - 12 pm, BYO Board Games @ Broadview Library
 - Aug 12: 10 am - 12 pm, BYO Board Games @ Lake Forest Park: Third Place Commons
-- Aug 19: 11 am - 1 pm, Beach Day @ Carkeek Park Beach
+- Aug 19: 11 am - 1 pm, Beach Play @ Carkeek Park Beach
 - Aug 26: 11 am - 1 pm, Hike and Playground Play at St. Edward State Park (Discover Pass required to park on-site: https://discoverpass.wa.gov/
 - Sep 2: 11 am - 2 pm, Art Day & Art Closet Clean-out @ Loyal Heights Community Center
 - Sep 9: 11 am - 1 pm, Nature Games @ Carkeek field near playground
